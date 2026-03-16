@@ -1,0 +1,323 @@
+/* ============================================
+   APP STYLES - Phase 1.5
+   ============================================ */
+
+.App {
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+/* ============================================
+   HEADER / NAVBAR
+   ============================================ */
+
+.app-header {
+  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  color: white;
+  padding: var(--space-4) var(--space-6);
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideIn 0.3s ease-out;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo h2 {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-name {
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+}
+
+.user-role {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+
+/* ============================================
+   NAVIGATION TABS
+   ============================================ */
+
+.nav-tabs {
+  background: white;
+  padding: var(--space-2) var(--space-6);
+  border-bottom: 2px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 72px;
+  z-index: 99;
+}
+
+.nav-tabs-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.nav-tab {
+  padding: var(--space-3) var(--space-6);
+  background: transparent;
+  color: var(--gray-600);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav-tab:hover {
+  background: var(--primary-50);
+  color: var(--primary-700);
+}
+
+.nav-tab.active {
+  background: var(--primary-600);
+  color: white;
+  border-color: var(--primary-600);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.page-title {
+  text-align: center;
+  color: var(--gray-900);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ============================================
+   EVENTS GRID
+   ============================================ */
+
+.events-grid {
+  display: grid;
+  gap: var(--space-6);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   ADMIN DASHBOARD
+   ============================================ */
+
+.admin-dashboard {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.admin-dashboard h1 {
+  margin-bottom: var(--space-8);
+  color: var(--gray-900);
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.stat-card {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card h3 {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-card .value {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--primary-600);
+  margin-top: var(--space-2);
+}
+
+/* Chart Section */
+.chart-section {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-6);
+}
+
+.chart-section h3 {
+  margin-bottom: var(--space-4);
+  color: var(--gray-800);
+}
+
+/* Recent Activity */
+.recent-activity {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-6);
+}
+
+.recent-activity h3 {
+  margin-bottom: var(--space-4);
+  color: var(--gray-800);
+}
+
+.recent-activity ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-activity li {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--gray-100);
+  transition: background var(--transition-fast);
+}
+
+.recent-activity li:last-child {
+  border-bottom: none;
+}
+
+.recent-activity li:hover {
+  background: var(--gray-50);
+}
+
+.recent-activity .time {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+  gap: var(--space-4);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--gray-200);
+  border-top-color: var(--primary-600);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+  }
+
+  .header-user {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .nav-tabs-content {
+    flex-direction: column;
+  }
+
+  .nav-tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  main {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .page-title {
+    font-size: var(--text-3xl);
+  }
+
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+}
